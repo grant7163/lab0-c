@@ -55,7 +55,6 @@ void q_free(queue_t *q)
         }
         /* Free queue structure */
         free(q);
-        q = NULL;
     }
 }
 
@@ -92,6 +91,7 @@ bool q_insert_head(queue_t *q, char *s)
             }
 
             free(newh);
+            newh = NULL;
         }
     }
 
@@ -133,6 +133,7 @@ bool q_insert_tail(queue_t *q, char *s)
             }
 
             free(newh);
+            newh = NULL;
         }
     }
 
@@ -152,14 +153,8 @@ bool q_remove_head(queue_t *q, char *sp, size_t bufsize)
     /* You need to fix up this code. */
     if (q != NULL && q->head != NULL) {
         if (sp != NULL) {
-            int size = strlen(q->head->value);
-            if (size < bufsize - 1) {
-                strncpy(sp, q->head->value, size);
-                sp[size] = '\0';
-            } else {
-                strncpy(sp, q->head->value, bufsize - 1);
-                sp[bufsize - 1] = '\0';
-            }
+            strncpy(sp, q->head->value, bufsize - 1);
+            sp[bufsize - 1] = '\0';
         }
 
         list_ele_t *temp = q->head;
@@ -197,7 +192,6 @@ void q_reverse(queue_t *q)
     /* You need to write the code for this function */
     if (q != NULL && q->head != NULL) {
         list_ele_t *current = q->head;
-        ;
         list_ele_t *previous = NULL;
         q->tail = q->head;
 

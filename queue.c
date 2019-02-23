@@ -101,6 +101,7 @@ bool q_insert_head(queue_t *q, char *s)
             }
 
             free(newh);
+            newh = NULL;
         }
     }
 
@@ -145,6 +146,7 @@ bool q_insert_tail(queue_t *q, char *s)
             }
 
             free(newh);
+            newh = NULL;
         }
     }
 
@@ -169,8 +171,13 @@ bool q_remove_head(queue_t *q, char *sp, size_t bufsize)
     return true;
 =======
     /* You need to fix up this code. */
+<<<<<<< HEAD
     if (q && q->head) {
         if (sp) {
+=======
+    if (q != NULL && q->head != NULL) {
+        if (sp != NULL) {
+>>>>>>> Modify q_remove_head and q_reverse function
             strncpy(sp, q->head->value, bufsize - 1);
             sp[bufsize - 1] = '\0';
         }
@@ -246,8 +253,13 @@ void q_sort(queue_t *q)
     /* TODO: Remove the above comment when you are about to implement. */
 =======
     /* You need to write the code for this function */
+<<<<<<< HEAD
     if (q && q->head) {
         list_ele_t *current;
+=======
+    if (q != NULL && q->head != NULL) {
+        list_ele_t *current = q->head;
+>>>>>>> Modify q_remove_head and q_reverse function
         list_ele_t *previous = NULL;
         q->tail = q->head;
 

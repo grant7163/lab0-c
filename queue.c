@@ -274,3 +274,8 @@ void q_sort(queue_t *q)
     }
 >>>>>>> Queue implement update
 }
+
+/*
+  q_sort
+*/
+

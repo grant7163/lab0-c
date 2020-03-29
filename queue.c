@@ -211,3 +211,8 @@ void q_reverse(queue_t *q)
 
     q->head = previous;
 }
+
+/*
+  q_sort
+*/
+

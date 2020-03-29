@@ -19,7 +19,6 @@ class Tracer:
     colored = False
 
     traceDict = {
-<<<<<<< HEAD
         1: "trace-01-ops",
         2: "trace-02-ops",
         3: "trace-03-ops",
@@ -71,49 +70,7 @@ class Tracer:
                  autograde=False,
                  useValgrind=False,
                  colored=False):
-=======
-        1 : "trace-01-ops",
-        2 : "trace-02-ops",
-        3 : "trace-03-ops",
-        4 : "trace-04-ops",
-        5 : "trace-05-ops",
-        6 : "trace-06-string",
-        7 : "trace-07-robust",
-        8 : "trace-08-robust",
-        9 : "trace-09-robust",
-        10 : "trace-10-malloc",
-        11 : "trace-11-malloc",
-        12 : "trace-12-malloc",
-        13 : "trace-13-perf",
-        14 : "trace-14-perf",
-        15 : "trace-15-perf",
-        16 : "trace-16-user"
-        }
 
-    traceProbs = {
-        1 : "Trace-01",
-        2 : "Trace-02",
-        3 : "Trace-03",
-        4 : "Trace-04",
-        5 : "Trace-05",
-        6 : "Trace-06",
-        7 : "Trace-07",
-        8 : "Trace-08",
-        9 : "Trace-09",
-        10 : "Trace-10",
-        11 : "Trace-11",
-        12 : "Trace-12",
-        13 : "Trace-13",
-        14 : "Trace-14",
-        15 : "Trace-15",
-        16 : "Trace-16"
-        }
-
-
-    maxScores = [0, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 100]
-
-    def __init__(self, qtest = "", verbLevel = 0, autograde = False, useValgrind = False):
->>>>>>> Merge new lab0-c from upstream to loca
         if qtest != "":
             self.qtest = qtest
         self.verbLevel = verbLevel
